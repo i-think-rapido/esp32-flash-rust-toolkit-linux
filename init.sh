@@ -1,1 +1,1 @@
-docker exec esp bash -c 'source /scripts/export-esp.sh'
+docker exec esp bash -c 'source /root/export-esp.sh'
