@@ -29,13 +29,15 @@ Other installation guides must be looked up on the internet.
 
 First we need to create the docker image.
 
+Switch into this projects folder and execute
+
 ```bash
-docker build --tag pio .
+./build.sh
 ```
 
 ## Working on your Project
 
-When starting the work of your project, you must assure, that
+When starting to work on your project, you must assure, that
 the controller is attached to your usb port and powered up.
 
 Ensure that the controller is available in the `/dev` folder.
@@ -68,36 +70,15 @@ It is also relevant to check, if the container is running.
 Try this procedure first, when you have trouble setting up the
 development environment.
 
-# One-time setup of your project
-
-    For the following steps, it is assumed, that the 
-    container is running.
-
-First, we must setup your platformio project
-
-```bash
-<path-to-executable>/install.sh
-```
-
-This ensures, that the project is properly set up.
-
 # Your Working Session
 
-1. Init the project (once)
+Upload your flash image (repeated)
+
+    Make sure, that you set your embedded device in upload mode.
 
 ```bash
-<path-to-executable>/init.sh
+<path-to-executable>/flash.sh <additional options like --mirror>
 ```
-
-2. Upload your flash image (repeated)
-
-    Make sure, that you set your embedded device in upload mode
-    for the second step.
-
-```bash
-<path-to-executable>/uplaod.sh /dev/ttyUSB0
-```
-(Set the device name to your needs.)
 
 This will build the firmware and flash your device.
 

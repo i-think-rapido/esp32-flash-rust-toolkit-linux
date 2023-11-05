@@ -16,7 +16,10 @@ RUN espup install
 RUN cargo install cargo-espflash
 
 # final steps
-RUN mkdir /prj
-WORKDIR /prj
+RUN mkdir -p /work/prj
+WORKDIR /work
+
+COPY ./main.sh /work/main.sh
+RUN chmod u+x /work/main.sh
 
 ENTRYPOINT [ "tail", "-f", "/dev/null" ]
