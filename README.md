@@ -1,18 +1,15 @@
-# Platformio CLI in a Docker Container with convenience Shell Scripts
+# esp32 Rust CLI in a Docker Container with convenience Shell Scripts
 
 This guide helps you set up a command line flashing environment of 
-embedded systems supported by platformio for linux based systems
+embedded systems supported by esp32 Rust for linux based systems
 (unfortunately not WSL).
 
 ---
 
-The necessity for this approach is routed in the circumstance,
-that the Platform.io-IDE is not working properly on NixOS.
-
 The following walkthrough helps patching the `/dev` folder into
 the container, so it is available with root access.
 
-For futher usage, we use the platformio CLI within the container.
+For futher usage, we use the esp32 xtensa toolchain within the container.
 This wraps the toolchain in a consistant and safe environment.
 
 **Restrictions**
@@ -57,15 +54,6 @@ So, at the start of your programming session, you have to spin up the container 
 ```bash
 <path-to-executable>/run-docker.sh
 ```
-
-When you finish your programming session, you should always ensure
-that the container is not running any more.
-
-```bash
-<path-to-executable>/kill-docker.sh
-```
-
-It is also relevant to check, if the container is running.
 
 Try this procedure first, when you have trouble setting up the
 development environment.

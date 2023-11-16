@@ -1,1 +1,1 @@
-docker rm -f esp
+docker rm -f esp 1>/dev/null
