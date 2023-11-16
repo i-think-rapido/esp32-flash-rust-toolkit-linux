@@ -29,6 +29,7 @@ First we need to create the docker image.
 Switch into this projects folder and execute
 
 ```bash
+# in this projects folder
 ./build.sh
 ```
 
@@ -52,7 +53,8 @@ the container later on despite you reattache your device.
 So, at the start of your programming session, you have to spin up the container each time.
 
 ```bash
-<path-to-executable>/run-docker.sh
+# in the esp32 projects folder
+<path-to-this-project>/run-docker.sh
 ```
 
 Try this procedure first, when you have trouble setting up the
@@ -65,7 +67,8 @@ Upload your flash image (repeated)
     Make sure, that you set your embedded device in upload mode.
 
 ```bash
-<path-to-executable>/flash.sh <additional options like --mirror>
+# in the esp32 projects folder
+<path-to-this-project>/flash.sh <additional options like --mirror>
 ```
 
 This will build the firmware and flash your device.
